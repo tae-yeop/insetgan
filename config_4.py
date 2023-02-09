@@ -4,7 +4,7 @@
 # Directories
 ##########################################################################
 home_dir = '.'
-out_folder = f'{home_dir}/results_config_2'
+out_folder = f'{home_dir}/results_config_4'
 
 ##########################################################################
 # Input parameters for starting canvases and insets
@@ -16,8 +16,8 @@ seed_inset = 0
 output_seed_images = False
 
 # specify selection of bodies and faces
-selected_bodies = [3, 9, 3, 9, 3, 9, 24, 11, 24, 11, 24, 11]
-selected_faces  = [4, 4, 19, 19, 30, 30, 0, 0, 10, 10, 20, 20] 
+selected_bodies = [3, 9, 3, 9, 3, 9]
+selected_faces  = [4, 4, 19, 19, 30]
 
 # truncation
 trunc_canvas = 0.5
@@ -30,19 +30,19 @@ trunc_insets = [0.95, 0.8, 0.8, 0.7, 0.7, 0.5, 0.5, 0.5, 0.3, 0.3, 0.3, 0.3, 0.3
 
 learning_rate_optim_canvas = 0.035
 learning_rate_optim_inset = 0.005
-num_optim_iter = 400
+num_optim_iter = 500
 
-switch_optimizers_every = 40
+switch_optimizers_every = 80 # 이걸 좀 더 증가
 start_canvas_optim = False #start optimization of canvas first | False = optimize inset first
 
 ##########################################################################
 # Constraints
 ##########################################################################
 
-fix_canvas_from_start = False
+fix_canvas_from_start = True
 fix_canvas_at_iter = 75 #-1 for no body constraint
 
-fix_inset_from_start = True
+fix_inset_from_start = False
 fix_inset_at_iter = 120 #-1 for no face constraint
 
 update_bbox_interval = 20

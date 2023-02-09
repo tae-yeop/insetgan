@@ -22,7 +22,7 @@ from torch.autograd import Variable as V
 
 device = torch.device('cuda:0')
 
-import config_2 as config # update to select different config file
+import config_4 as config # update to select different config file
 
 os.makedirs(config.out_folder, exist_ok=True)
 
